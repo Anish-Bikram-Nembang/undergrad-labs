@@ -1,0 +1,23 @@
+[project]
+name = "semii"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Anish-Bikram-Nembang", email = "anish.bikram.nembang@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "pandas>=3.0.6",
+    "pyreadstat>=1.3.6",
+]
+[tool.uv]
+package = false
+
+[project.scripts]
+semii = "semii:main"
+
+[build-system]
+requires = ["uv_build>=0.12.15,<0.13.0"]
+build-backend = "uv_build"
