@@ -7,3 +7,17 @@
 // to display its data. Write a main() program to test the FullTime and PartTime
 // classes by creating instances of them, asking the user to fill in their data
 // with readdata(), and then displaying the data with printdata().
+#include <iostream>
+#include <string>
+class Lecturer { protected: int id; std::string name; public:
+  void readdata() { std::cin >> id >> name; } void printdata() const { std::cout << id << ' ' << name; }
+};
+class PartTime : public Lecturer { float pay; public:
+  void readdata() { Lecturer::readdata(); std::cin >> pay; }
+  void printdata() const { Lecturer::printdata(); std::cout << ' ' << pay << '\n'; }
+};
+class FullTime : public Lecturer { float pay; public:
+  void readdata() { Lecturer::readdata(); std::cin >> pay; }
+  void printdata() const { Lecturer::printdata(); std::cout << ' ' << pay << '\n'; }
+};
+int main() { PartTime part; FullTime full; part.readdata(); full.readdata(); part.printdata(); full.printdata(); }
