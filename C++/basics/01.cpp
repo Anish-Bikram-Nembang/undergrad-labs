@@ -15,6 +15,7 @@ int main(void) {
     std::cin >> celsius;
     fahrenheit = celsius * 9.0f / 5.0f + 32;
     std::cout << "Fahrenheit: " << fahrenheit << '\n';
+    break;
   }
   case 2: {
     float celsius, fahrenheit;
@@ -22,6 +23,7 @@ int main(void) {
     std::cin >> fahrenheit;
     celsius = (fahrenheit - 32) * 5.0f / 9.0f;
     std::cout << "Celsius: " << celsius << '\n';
+    break;
   }
   default:
     std::cout << "Invalid option";

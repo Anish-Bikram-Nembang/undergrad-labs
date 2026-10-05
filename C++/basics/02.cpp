@@ -17,7 +17,7 @@ private:
   std::string name;
 
 public:
-  Account(std::string n, float b) : name{n}, balance{b} {}
+  Account(std::string n, float b) : balance{b}, name{n} {}
   void displayDetails() {
     std::cout << "\nName: " << name << "\n Balance: " << balance << '\n';
   }
