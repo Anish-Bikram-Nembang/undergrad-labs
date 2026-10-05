@@ -1,6 +1,7 @@
 from data import load_sample, get_age
-from practical1 import frequency_table
-from practical2 import descriptive_stats
+from statistics.practical1 import frequency_table
+from statistics.practical2 import descriptive_stats
+from probability.practical1 import practical1
 
 def main():
     sample = load_sample()
@@ -11,6 +12,8 @@ def main():
 
     print("\nPractical 2: Descriptive Statistics")
     print(descriptive_stats(age).round(3))
+
+    practical1()
 
 
 if __name__ == "__main__":
