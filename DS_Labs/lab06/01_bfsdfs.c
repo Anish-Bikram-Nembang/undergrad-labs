@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 static void dfs(int graph[20][20], int n, int vertex, int visited[20]) {
   visited[vertex] = 1;
@@ -18,12 +17,14 @@ int main(void) {
   for (int i = 0; i < edges; ++i) {
     int from, to;
     scanf("%d %d", &from, &to);
-    if (from < 1 || from > n || to < 1 || to > n) return 1;
+    if (from < 1 || from > n || to < 1 || to > n)
+      return 1;
     graph[from - 1][to - 1] = 1;
   }
   printf("Starting vertex: ");
   scanf("%d", &start);
-  if (start < 1 || start > n) return 1;
+  if (start < 1 || start > n)
+    return 1;
   int front = 0, back = 0;
   queue[back++] = start - 1;
   visited[start - 1] = 1;
@@ -37,7 +38,8 @@ int main(void) {
         queue[back++] = next;
       }
   }
-  for (int i = 0; i < n; ++i) visited[i] = 0;
+  for (int i = 0; i < n; ++i)
+    visited[i] = 0;
   printf("\nDFS: ");
   dfs(graph, n, start - 1, visited);
   puts("");

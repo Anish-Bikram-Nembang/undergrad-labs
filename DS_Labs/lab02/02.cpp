@@ -1,5 +1,3 @@
-// 1. Write a program to enter a number and perform ciel() and floor function to
-// obtain the rounded values
 // 2. Write a program to define the UDF
 // a. To calculate the factorial
 // b. To generate a fibonacci series upto 'n' term [recursive function]
